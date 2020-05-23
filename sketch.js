@@ -17,12 +17,7 @@ function setup() {
 	
 
 	packageSprite=createSprite(width/2, 80, 10,10);
-	var options(){
-	isStatic:false,
-	restitution:0.3,
-	friction:2.0,
-	density:1.2,
-	}
+	
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
 
@@ -43,6 +38,12 @@ function setup() {
 
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
+	var options={
+	isStatic:false,
+	restitution:0.3,
+	friction:2.0,
+	density:1.2,
+	}
  	World.add(world, ground);
 
 
